@@ -1,0 +1,285 @@
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+  body {
+  /*light*/
+  --másikprofilblue: hsl(246, 80%, 60%);
+  --profilkártyablue: hsl(246, 46%, 20%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --kártyaháttér: hsl(235, 46%, 20%);
+  --dark-blue-hover: hsl(235, 33%, 50%);
+  --text-pale-blue: hsl(236, 100%, 87%);
+  --text-white: hsl(0, 0%, 100%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+
+ background-color: var(--very-dark-blue);
+  color: var(--text-white);
+  font-family: 'Rubic', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  display: grid;
+
+}
+a{
+  text-decoration: none;
+  color: var(--text-white);
+}
+
+.active {
+  color: var(--text-white) !important;
+}
+
+.profilkártya{
+  background-color: var(--másikprofilblue);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 7rem;
+  width:15rem;
+}
+
+.profilkép{
+  min-width: 2.5rem;
+  border: 3px solid var(--text-white);
+  border-radius: 50%;
+  justify-self: end;
+}
+
+.profil{
+  background-color: var(--profilkártyablue);
+  border-radius: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  grid-row: 1/3;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0.8rem;
+}
+
+.szöveg{
+  justify-self: start;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+.szöveg h3{
+  font-weight:300;
+}
+
+.periódusok{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-size:small;
+  margin-left: 0.7rem;
+}
+.periódusok a{
+  color: var(--text-pale-blue);
+}
+
+.elfoglaltságok{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(7, 1fr);
+  row-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin: 3rem auto;
+}
+
+.kártya{
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:25% 75%;
+  height: 7rem;
+  width: 15rem;
+}
+
+.aktivításikon>img {
+  min-width: 3rem;
+  align-self: end;
+  justify-self: end;
+}
+.aktivításikon{
+  grid-column:2/4;
+}
+.munka{
+  background-color: hsl(15, 100%, 70%);
+}
+.játék{
+  background-color: hsl(195, 74%, 62%);
+}
+.tanulás{
+  background-color: hsl(348, 100%, 68%);
+}
+.torna{
+  background-color: hsl(145, 58%, 55%);
+}
+.társaság{
+  background-color: hsl(264, 64%, 52%);
+}
+.énidő{
+  background-color: hsl(43, 84%, 65%);
+}
+
+.kártyaszöveg{
+  background-color: var(--kártyaháttér);
+  max-width: 15rem;
+  border-radius: 10px;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: .9rem;
+}
+.kártyaszöveg:hover{
+  cursor: pointer;
+  background-color: var(--dark-blue-hover);
+}
+
+.kártyacíme{
+display: grid;
+grid-template-columns: 1fr 1fr;
+font-weight: 400;
+font-size: x-small;
+}
+.kártyacíme>img{
+  max-width: 1rem;
+justify-self: right;
+margin-top: .5rem;
+}
+
+.órákszáma{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: x-large;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+.órákszáma p:nth-child(1){
+  justify-self: right;
+  font-size: x-small;
+  color: var(--text-pale-blue);
+}
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: var(--very-dark-blue);}
+
+
+@media only screen and (min-width: 768px) {
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+.elfoglaltságok{
+  display: grid;
+  grid-template-columns:repeat (4, 10rem);
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+.profilkártya{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  height: 17rem;
+  width: 10rem;
+  grid-row: 1/3;
+}
+
+.profilkép{
+  border: 3px solid #fff;
+  border-radius: 50%;
+  align-self: start;
+  justify-self: start;
+
+}
+
+  .profil{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-row: 1/3;
+    align-items: center;
+  justify-items: center;
+  grid-gap:0.8rem;
+  padding: .7rem;
+}
+
+.szöveg{
+  justify-self: start;
+  align-self: start;
+  line-height: 2rem;
+}
+
+.szöveg h3{ 
+  font-size: x-large;
+}
+
+.periódusok {
+  display: grid;
+  grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+align-items: center;
+justify-items: start;
+padding: 5rem;
+}
+
+.kártya{
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 75%;
+  height: 8rem;
+  width: 10rem;
+}
+
+.aktivításikon {
+  grid-column: 2/4;
+}
+.aktivításikon img{
+max-width: 3rem;
+align-self: end;
+justify-self: end;
+}
+
+.kártyaszöveg{
+  background-color: var(--profilkártyablue);
+  min-width: 15rem;
+  border-radius: 10px;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: .7rem;
+}
+
+.kártyacíme{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.kártyacíme{
+  width: 0.9rem;
+  align-self: right;
+  margin-top: .5rem;
+}
+
+.órákszáma{
+ display: flex;
+ flex-direction: column;
+ font-size: x-large;
+}
+
+}

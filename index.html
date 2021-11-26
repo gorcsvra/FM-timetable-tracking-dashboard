@@ -1,80 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=ma, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Időbeosztás tábla</title>
 </head>
+
 <body>
+  <main>
+    <div class="elfoglaltságok">
+      <div class="profilkártya">
+        <div class="profil">
+          <img src="./images/image-jeremy.png" alt="profilkép" class="kép" />
+          <div class="szöveg">
+            <p>Jelentés</p>
+            <h3>Jeremy Robson</h3>
+          </div>
+        </div>
+      </div>
+      <div class="periódusok">
+        <a id="napi" href="#">Napi</a>
+        <a id="heti" href="#">Heti</a>
+        <a id="havi" href="#">Havi</a>
+      </div>
+    </div>
 
-  Report for
-  Jeremy Robson
+    <div class="munka kártya">
+      <div class="aktivításikon">
+        <img src="./images/icon-work.svg" alt="munka ikon" />
+      </div>
+      <div class="kártyaszöveg">
+        <div class="kártyacíme">
+          <p>Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+        </div>
+        <div class="órákszáma">
+          <p>5óra</p>
+          <p>Korábban - 7óra</p>
+        </div>
+      </div>
+    </div>
+    <div class="játék kártya">
+      <div class="aktivításikon">
+        <img src="./images/icon-play.svg" alt="játék ikon" />
+      </div>
+      <div class="kártyaszöveg">
+        <div class="kártyacíme">
+          <p>Munka</p>
+          <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+        </div>
+        <div class="órákszáma">
+          <p>1óra</p>
+          <p>Korábban - 2óra</p>
+        </div>
+      </div>
+    </div>
 
-  Daily
-  Weekly
-  Monthly
+    <div class="tanulás kártya">
+      <div class="aktivításikon">
+        <img src="./images/icon-study.svg" alt="tanulás ikon" />
+      </div>
+      <div class="kártyaszöveg">
+        <div class="kártyacíme">
+          <p>Tanulás</p>
+          <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+        </div>
+        <div class="órákszáma">
+          <p>1óra</p>
+          <p>Korábban - 0óra</p>
+        </div>
+      </div>
+    </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <div class="torna kártya">
+      <div class="aktivításikon">
+        <img src="./images/icon-exercise.svg" alt="torna ikon" />
+      </div>
+      <div class="kártyaszöveg">
+        <div class="kártyacíme">
+          <p>Torna</p>
+          <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+        </div>
+        <div class="órákszáma">
+          <p>1óra</p>
+          <p>Korábban - 1óra</p>
+        </div>
+      </div>
+    </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <div class="társaság kártya">
+      <div class="aktivításikon">
+        <img src="./images/icon-social.svg" alt="társaság ikon" />
+      </div>
+      <div class="kártyaszöveg">
+        <div class="kártyacíme">
+          <p>Társaság</p>
+          <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+        </div>
+        <div class="órákszáma">
+          <p>0óra</p>
+          <p>Korábban - 1óra</p>
+        </div>
+      </div>
+      </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+      <div class="énidő kártya">
+        <div class="aktivításikon">
+          <img src="./images/icon-self-care.svg" alt="énidő ikon" />
+        </div>
+        <div class="kártyaszöveg">
+          <div class="kártyacíme">
+            <p>Énidő</p>
+            <img src="./images/icon-ellipsis.svg" alt="ellipszis ikon" />
+          </div>
+          <div class="órákszáma">
+            <p>1óra</p>
+            <p>Korábban - 1óra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Görcs Veronika</a>.
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
+
 </html>
